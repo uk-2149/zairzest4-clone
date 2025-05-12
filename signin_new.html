@@ -20,17 +20,16 @@
             margin: 0;
             height: 100vh;
             font-family: 'Outfit', sans-serif;
-
-
+            justify-content: flex-start;
 
         }
         .leftside {
             
-            background-image: url(../zairzest\ images/zairzest_signin.jpg);
+            background-image: linear-gradient(rgba(41, 41, 41, 0.5), rgba(41, 41, 41, 0.5)), url(./zairzest_signin.jpg);
             /* flex: 3/4; */
             padding: 0px 80px;
-
-
+            background-size: cover;
+            width: 50vw;
             
 
         }
@@ -40,8 +39,8 @@
             /* padding: 0px 80px 0px; */
             height: 496.45px;
             /* width: 368px; */
-            margin-top: 220px;
-            
+            width: 600px;
+            margin: 320px auto;
             color: #E8E6E3;
             
             
@@ -58,23 +57,27 @@
 
             
         }
-        .leftpara{
-            /* width: 370px; */
-
-        }
 
         .rightcard {
+            height: 100vh;
             /* flex: 1/4; */
             display: flex;
             flex-direction: column;
             /* justify-content: center;
             align-items: center; */
-            padding: 0px 16px 0px;
-            margin-left: 20px;
+            /* padding: 0px 16px 0px; */
             align-self: center;
-
+            justify-content: center;
             /* /* padding-left: 50px;  */
+            width: 30vw;
+            min-width: 300px;
+            margin: auto;
+        }
 
+        @media (max-width: 1024px) {
+            .rightcard {
+                width: 60vw;
+            }
         }
 
         
@@ -170,12 +173,6 @@
             .leftside{
                 display: none;
             }
-            .rightcard{
-                
-                /* width: 100vw;
-                height: 100vh;
-                display: flex; */
-            } 
             .pagecontainer {
                 justify-content: center;
             }
