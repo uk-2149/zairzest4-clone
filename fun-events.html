@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CARD</title>
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap");
+
+      body {
+        /* margin: 0;
+        padding: 0; */
+        background-color: #0d0e0e;
+
+        min-width: 489px;
+        font-family: "outfit", sans-serif;
+      }
+
+      .main {
+        display: flex;
+        flex-direction: column;
+        /* justify-content: center; */
+        align-items: center;
+      }
+
+      h1 {
+        color: #fff;
+        font-weight: 600;
+        font-size: 60px;
+        letter-spacing: -1px;
+        word-spacing: 8px;
+        /* text-align: start; */
+      }
+
+      .mainheading{
+        border: 2px;
+        width: 90vw;
+      }
+
+      .container {
+        border: 2px;
+        /* height: 100vh; */
+        width: 90vw;
+
+        font-family: "Outfit", sans-serif;
+
+        background-color: #0d0e0e;
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        /* align-items: center; */
+        /* justify-content: space-around; */
+        justify-content: space-between;
+
+        /* column-gap: 30px; */
+
+        row-gap: 50px;
+        /* justify-content: space-around; */
+
+        align-items: center;
+        /* justify-content: center; */
+      }
+
+      .card {
+        width: 345px;
+        height: 540px;
+
+        margin: 0px 10px;
+        /* margin-left: 0;
+        margin-right: 0; */
+        padding: 10px;
+        border-radius: 8px;
+      }
+
+      .front {
+        background-color: rgb(32, 30, 30);
+      }
+
+      .back {
+        background: linear-gradient(
+          180deg,
+          rgba(43, 128, 255, 0.703),
+          rgb(0, 0, 0)
+        );
+      }
+
+      .frontimage {
+        display: flex;
+        justify-content: center;
+      }
+
+      .fronttext {
+        padding: 15px;
+
+        display: flex;
+        flex-direction: column;
+      }
+
+      .time {
+        font-size: small;
+      }
+
+      .name {
+        color: white;
+      }
+      .time {
+        color: white;
+      }
+      .venue {
+        color: white;
+      }
+
+      .back {
+        background-color: linear-gradient(70deg, blue, pink);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .descript{
+        color: #fff;
+        text-align: center;
+        width: 300px;
+        line-height: 23px;
+        font-size: 15px;
+        padding: 10px;
+        margin-bottom: 30px;
+
+      }
+
+      .closebtn{
+        height: 40px;
+        width: 80px;
+        border-radius: 10px;
+        background-color: #007FAA;
+        color: white;
+        border: none;
+        font-size: medium;
+        font-weight: bold;
+        
+      }
+      .closebtn:hover{
+        background-color: #007196;
+      
+      }
+
+
+      @media only screen and (max-width: 1353px) {
+        .container {
+          /* column-gap: -20px; */
+          justify-content: space-between;
+          width: 70vw;
+          gap: 30px;
+        }
+        .mainheading{
+          display: flex;
+          justify-content: center;
+        }
+      }
+
+      @media only screen and (max-width: 1148px) {
+
+        .card {
+          width: 300px;
+          height: 500px;
+          
+        }
+        .fronttext{
+          font-size: small;
+          /* margin-bottom: 20px; */
+          
+        }
+        
+      }
+
+      @media only  screen and (max-width:1019px) {
+
+        .container{
+          width: 40vw;
+          justify-content: center;
+        }
+        h1{
+          font-size: 40px;
+        }
+        
+      }
+
+    
+
+
+    </style>
+  </head>
+  <body>
+    <!-- DESIGNING CARDS FOR WEBSITES -->
+
+    <div class="main">
+      <div class="mainheading">
+        <h1>Tech Events</h1>
+
+      </div> 
+      <br>
+      
+      <div class="container">
+        <div class="card front">
+          <div class="frontimage">
+            <img src="/treasue.jpg" alt="" height="386px" width="344px"/>
+            
+          </div>
+
+          <div class="fronttext">
+            <div class="name">
+              <h2>Treasure Hunt</h2>
+            </div>
+
+            <div class="cardbottom">
+              <div class="time">
+                <time datetime="11 Nov - 4:30 PM"
+                  >11 Nov - 4:30 PM</time
+                >
+              </div>
+              <div class="venue">
+                <p>SAC Area</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="card back">
+          <p class="descript">Treasure Hunt is a thrilling, tech-themed competition where teams of 8 solve riddles and tech-related puzzles to uncover clues leading to the next location. Racing against other teams, participants must think fast and work together to reach the final surprise destination. The team that arrives first wins the prize.</p>
+
+          <button class="closebtn">Close</button>
+
+        </div>
+
+        <div class="card front">
+          <div class="frontimage">
+            <img src="jamming.jpg" alt="" height="386px" width="344px" />
+          </div>
+
+          <div class="fronttext">
+            <div class="name">
+              <h2>Jamming Night</h2>
+            </div>
+
+            <div class="cardbottom">
+              <div class="time">
+                <time datetime="12 Nov - 4:30pm"
+                  >12 Nov - 4:30pm</time
+                >
+              </div>
+              <div class="venue">
+                <p>SAC Area</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="card back">
+          <p class="descript">Groove to the Beat at Dance Night! Join us for an electrifying evening of live music and dance, where enthusiasts of all styles can showcase their moves and connect with fellow dancers. Bring your friends and dance the night away!</p>
+
+          <button class="closebtn">Close</button>
+
+        </div>
+
+        <div class="card front">
+          <div class="frontimage">
+            <img src="/paper.jpg" alt="" height="386px" width="344px" />
+          </div>
+
+          <div class="fronttext">
+            <div class="name">
+              <h2>Paper Dance</h2>
+            </div>
+
+            <div class="cardbottom">
+              <div class="time">
+                <time datetime="12 Nov - 12:00-5:00pm"
+                  >12 Nov - 12:00-5:00pm</time
+                >
+              </div>
+              <div class="venue">
+                <p>SAC Area</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="card back">
+          <p class="descript">Paper Dance is an engaging event where participants pair up to test their balance and teamwork. The challenge involves dancing on a piece of paper that folds with each step. The winning pairs are those who can stay on the paper until the final fold. This thrilling competition combines grace, balance, and collaboration, making it a fun and interactive experience for everyone involved.</p>
+
+          <button class="closebtn">Close</button>
+
+        </div>
+
+        <div class="card front">
+          <div class="frontimage">
+            <img src="/twister.jpg" alt="" height="386px" width="344px" />
+          </div>
+
+          <div class="fronttext">
+            <div class="name">
+              <h2>Twister</h2>
+            </div>
+
+            <div class="cardbottom">
+              <div class="time">
+                <time datetime="12 nov - 12:00-5:00pm"
+                  >12 nov - 12:00-5:00pm</time
+                >
+              </div>
+              <div class="venue">
+                <p>B Block,4th floor</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="card back">
+          <p class="descript">Twister is a fun game where players place hands and feet on colors chosen by a spinner. As they twist into awkward positions to avoid overlapping, anyone who falls or touches the mat with an elbow or knee is out. Get ready for unpredictable fun!</p>
+
+          <button class="closebtn">Close</button>
+
+        </div>
+
+        <div class="card front">
+          <div class="frontimage">
+            <img src="/pvp.jpg" alt="" height="386px" width="344px" />
+          </div>
+
+          <div class="fronttext">
+            <div class="name">
+              <h2>PVP Gaming</h2>
+            </div>
+
+            <div class="cardbottom">
+              <div class="time">
+                <time datetime="12 Nov - 12:00-5:00pm"
+                  >12 Nov - 12:00-5:00pm</time
+                >
+              </div>
+              <div class="venue">
+                <p>Zairza</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="card back">
+          <p class="descript">PVP Gaming is an exciting one-on-one competition where players choose from a diverse roster of iconic characters with unique abilities. Matches will test skills and reflexes, with winners determined in a knockout format based on the best of three matches. Showcase your talents and aim to be crowned the ultimate champion!</p>
+
+          <button class="closebtn">Close</button>
+        </div>
+        <div class="card front">
+          <div class="frontimage">
+            <img src="/proggramme.jpg" alt="" height="386px" width="344px" />
+          </div>
+
+          <div class="fronttext">
+            <div class="name">
+              <h2>Programemer</h2>
+            </div>
+
+            <div class="cardbottom">
+              <div class="time">
+                <time datetime="11 Nov & 12 Nov"
+                  >11 Nov & 12 Nov</time
+                >
+              </div>
+              <div class="venue">
+                <p>Online</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="card back">
+          <p class="descript">Programemer invites participants to unleash their inner meme artist! To enter, submit your original memes via the provided Google Form. Submitted memes will be posted on social media, where you can promote your entries for more likes and views. The participant with the most likes will be crowned the winner. Get creative and join the fun!</p>
+
+          <button class="closebtn">Close</button>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
