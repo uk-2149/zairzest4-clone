@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CARD</title>
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap");
+
+      body {
+        /* margin: 0;
+        padding: 0; */
+        background-color: #0d0e0e;
+
+        min-width: 489px;
+        font-family: "outfit", sans-serif;
+      }
+
+      .main {
+        display: flex;
+        flex-direction: column;
+        /* justify-content: center; */
+        align-items: center;
+      }
+
+      h1 {
+        color: #fff;
+        font-weight: 600;
+        font-size: 60px;
+        letter-spacing: -1px;
+        word-spacing: 8px;
+        /* text-align: start; */
+      }
+
+      .mainheading{
+        border: 2px solid red;
+        width: 90vw;
+      }
+
+      .container {
+        border: 2px solid red;
+        /* height: 100vh; */
+        width: 90vw;
+
+        font-family: "Outfit", sans-serif;
+
+        background-color: #0d0e0e;
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        /* align-items: center; */
+        /* justify-content: space-around; */
+        justify-content: space-between;
+
+        /* column-gap: 30px; */
+
+        row-gap: 50px;
+        /* justify-content: space-around; */
+
+        align-items: center;
+        /* justify-content: center; */
+      }
+
+      .card {
+        width: 345px;
+        height: 540px;
+
+        margin: 0px 10px;
+        /* margin-left: 0;
+        margin-right: 0; */
+        padding: 10px;
+        border-radius: 8px;
+      }
+
+      .front {
+        background-color: rgb(32, 30, 30);
+      }
+
+      .back {
+        background: linear-gradient(
+          180deg,
+          rgba(43, 128, 255, 0.703),
+          rgb(0, 0, 0)
+        );
+      }
+
+      .frontimage {
+        display: flex;
+        justify-content: center;
+      }
+
+      .fronttext {
+        padding: 15px;
+
+        display: flex;
+        flex-direction: column;
+      }
+
+      .time {
+        font-size: small;
+      }
+
+      .name {
+        color: white;
+      }
+      .time {
+        color: white;
+      }
+      .roomno {
+        color: white;
+      }
+
+      .back {
+        background-color: linear-gradient(70deg, blue, pink);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .descript{
+        color: #fff;
+        text-align: center;
+        width: 300px;
+        line-height: 23px;
+        font-size: 15px;
+        padding: 10px;
+        margin-bottom: 30px;
+
+      }
+
+      .closebtn{
+        height: 40px;
+        width: 80px;
+        border-radius: 10px;
+        background-color: #007FAA;
+        color: white;
+        border: none;
+        font-size: medium;
+        font-weight: bold;
+        
+      }
+      .closebtn:hover{
+        background-color: #007196;
+      
+      }
+
+      .img{
+        /* height: ; */
+      }
+
+
+      @media only screen and (max-width: 1353px) {
+        .container {
+          /* column-gap: -20px; */
+          justify-content: space-between;
+          width: 70vw;
+          gap: 30px;
+        }
+        .mainheading{
+          display: flex;
+          justify-content: center;
+        }
+      }
+
+      @media only screen and (max-width: 1148px) {
+
+        .card {
+          width: 300px;
+          height: 500px;
+          
+        }
+        .fronttext{
+          font-size: small;
+          /* margin-bottom: 20px; */
+          
+        }
+        
+        .img{
+          
+        }
+        .container{
+
+        }
+        
+      }
+
+      @media only  screen and (max-width:1019px) {
+
+        .container{
+          width: 40vw;
+          justify-content: center;
+        }
+        h1{
+          font-size: 40px;
+        }
+        
+      }
+
+    
+
+
+    </style>
+  </head>
+  <body>
+    <!-- DESIGNING CARDS FOR WEBSITES -->
+
+    <div class="main">
+      <div class="mainheading">
+        <h1>Tech Events</h1>
+
+      </div> 
+      <br>
+      
+      <div class="container">
+        <div class="card front">
+          <div class="frontimage">
+            <img src="./DIG_THE_WEB.webp" alt="" height="386px" width="344px"/>
+             <!-- <img src="./DIG_THE_WEB.webp" style="height: 300px; width: 280px;" alt=""> -->
+          </div>
+
+          <div class="fronttext">
+            <div class="name">
+              <h2>Dig The Web</h2>
+            </div>
+
+            <div class="cardbottom">
+              <div class="time">
+                <time datetime="12 Nov - 2:30-4:00 PM"
+                  >12 Nov - 2:30-4:00 PM</time
+                >
+              </div>
+              <div class="roomno">
+                <p>C-207</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="card back">
+          <p class="descript">In Dig the Web, participants tackle a series of internet-based puzzles within a set time for each. With each round, questions grow in difficulty and time limits increase. The participant with the most correct answers wins the event.</p>
+
+          <button class="closebtn">Close</button>
+
+        </div>
+
+        <div class="card front">
+          <div class="frontimage">
+            <img src="./CP_RUSH.webp" alt="" height="386px" width="344px" />
+          </div>
+
+          <div class="fronttext">
+            <div class="name">
+              <h2>CP Rush</h2>
+            </div>
+
+            <div class="cardbottom">
+              <div class="time">
+                <time datetime="11 Nov - 3:00-4:30 PM"
+                  >11 Nov - 3:00-4:30 PM</time
+                >
+              </div>
+              <div class="roomno">
+                <p>C-203</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="card back">
+          <p class="descript">CP Rush is a competitive programming event where participants face off in fast-paced, 1v1 rounds to solve coding problems against the clock. Winners from each round advance until a final champion emerges. The questions start simple but increase in complexity, demanding quick thinking and coding skills. All you need is a laptop and a focused mind to compete and aim for victory.</p>
+
+          <button class="closebtn">Close</button>
+
+        </div>
+
+        <div class="card front">
+          <div class="frontimage">
+            <img src="./ROBO_SUMO.webp" alt="" height="386px" width="344px" />
+          </div>
+
+          <div class="fronttext">
+            <div class="name">
+              <h2>Robo Sumo</h2>
+            </div>
+
+            <div class="cardbottom">
+              <div class="time">
+                <time datetime="12 Nov - 1:00-3:00 PM"
+                  >12 Nov - 1:00-3:00 PM</time
+                >
+              </div>
+              <div class="roomno">
+                <p>SAC Area</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="card back">
+          <p class="descript">Robo Sumo is an electrifying match where autonomous or remote-controlled robots compete to push each other out of the ring within 5 minutes. Loaner bots are available, so anyone can join. Bring your excitement, and get ready for intense robotic action!</p>
+
+          <button class="closebtn">Close</button>
+
+        </div>
+
+        <div class="card front">
+          <div class="frontimage">
+            <img src="./IDEATHON.webp" alt="" height="386px" width="344px" />
+          </div>
+
+          <div class="fronttext">
+            <div class="name">
+              <h2>Ideathon</h2>
+            </div>
+
+            <div class="cardbottom">
+              <div class="time">
+                <time datetime="12 Nov - 2:00-4:00 PM"
+                  >12 Nov - 2:00-4:00 PM</time
+                >
+              </div>
+              <div class="roomno">
+                <p>C-204</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="card back">
+          <p class="descript">Ideathon is a collaborative event where teams of 2-3 brainstorm, develop, and pitch innovative ideas to solve a given problem statement. It's a test of creativity and practicality, with the team presenting the most impactful solution winning the prize.</p>
+
+          <button class="closebtn">Close</button>
+
+        </div>
+
+        <div class="card front">
+          <div class="frontimage">
+            <img src="./DESIGNATHON.webp" alt="" height="386px" width="344px" />
+          </div>
+
+          <div class="fronttext">
+            <div class="name">
+              <h2>Designathon</h2>
+            </div>
+
+            <div class="cardbottom">
+              <div class="time">
+                <time datetime="11 Nov - 2:00-4:00 PM"
+                  >11 Nov - 2:00-4:00 PM</time
+                >
+              </div>
+              <div class="roomno">
+                <p>C-202</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="card back">
+          <p class="descript">Designathon is an intense creative competition where participants work in teams to design innovative solutions for real-world problems. Teams will have limited time to brainstorm, develop, and present their ideas using design principles and creativity. The event encourages unique approaches, and the team with the best design solution will take home the prize.</p>
+
+          <button class="closebtn">Close</button>
+
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
