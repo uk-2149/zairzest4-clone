@@ -1,388 +1,481 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>CARD</title>
-    <style>
-      @import url("https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap");
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="footer.css">
+  <title>Event Cards</title>
+  <style>
+    @import url("https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap");
 
-      body {
-        /* margin: 0;
-        padding: 0; */
-        background-color: #0d0e0e;
+    footer{
+      margin-top: 3vh;
+    }
 
-        min-width: 489px;
-        font-family: "outfit", sans-serif;
-      }
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
 
-      .main {
-        display: flex;
-        flex-direction: column;
-        /* justify-content: center; */
-        align-items: center;
-      }
+    body {
+      background-color: #0d0e0e;
+      font-family: "Outfit", sans-serif;
+      min-width: 320px;
+    }
 
-      h1 {
-        color: #fff;
-        font-weight: 600;
-        font-size: 60px;
-        letter-spacing: -1px;
-        word-spacing: 8px;
-        /* text-align: start; */
-      }
+    .main {
+      display: flex;
+      flex-direction: column;
+      padding: 30px 10px;
+    }
 
-      .mainheading{
-        border: 2px;
-        width: 90vw;
-      }
+    .main > h1 {
+      color: #fff;
+      font-weight: 600;
+      font-size: 60px;
+      letter-spacing: -1px;
+      word-spacing: 8px;
+      text-align: left;
+      margin-bottom: 40px;
+      margin-left: 7vw;
+    }
 
-      .container {
-        border: 2px;
-        /* height: 100vh; */
-        width: 90vw;
+    .container {
+      margin-left: 7vw;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: flex-start;
+      align-items: center;
+      gap: 50px;
+      width: 90vw;
+    }
 
-        font-family: "Outfit", sans-serif;
+    .card-container {
+      perspective: 1000px;
+      width: 345px;
+      height: 540px;
+      position: relative;
+      transform-style: preserve-3d;
+    }
 
-        background-color: #0d0e0e;
-        box-sizing: border-box;
-        margin: 0;
-        padding: 0;
-        display: flex;
-        flex-direction: row;
-        flex-wrap: wrap;
-        /* align-items: center; */
-        /* justify-content: space-around; */
-        justify-content: space-between;
+    .card {
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      transition: transform 0.8s;
+      transform-style: preserve-3d;
+    }
 
-        /* column-gap: 30px; */
+    .card-container.flipped .card {
+      transform: rotateY(180deg);
+    }
 
-        row-gap: 50px;
-        /* justify-content: space-around; */
+    .card-face {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      backface-visibility: hidden;
+      border-radius: 8px;
+      overflow: hidden;
+    }
 
-        align-items: center;
-        /* justify-content: center; */
-      }
+    .front-face {
+      background-color: #201e1e;
+      display: flex;
+      flex-direction: column;
+      z-index: 2;
+      position: absolute;
+      top: 0;
+      left: 0;
+    }
 
-      .card {
-        width: 345px;
-        height: 540px;
+    .back-face {
+      background: linear-gradient(180deg, rgba(43, 128, 255, 0.703), rgb(0, 0, 0));
+      color: white;
+      transform: rotateY(180deg);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+      position: absolute;
+      top: 0;
+      left: 0;
+    }
 
-        margin: 0px 10px;
-        /* margin-left: 0;
-        margin-right: 0; */
-        padding: 10px;
-        border-radius: 8px;
-      }
+    .frontimage {
+      display: flex;
+      justify-content: center;
+      height: 75%;
+      position: relative;
+      padding: 10px;
+      background-color: rgb(32, 30, 30);
+    }
 
-      .front {
-        background-color: rgb(32, 30, 30);
-      }
+    .frontimage img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: 5px;
+    }
 
-      .back {
-        background: linear-gradient(
-          180deg,
-          rgba(43, 128, 255, 0.703),
-          rgb(0, 0, 0)
-        );
-      }
+    .front-text {
+      display: flex;
+      position: relative;
+    }
 
-      .frontimage {
-        display: flex;
-        justify-content: center;
-      }
+    .info-icon {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      width: 24px;
+      height: 24px;
+      background-color: #00BFFF;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      font-size: 14px;
+      font-weight: bold;
+      cursor: pointer;
+    }
 
-      .fronttext {
-        padding: 15px;
+    .fronttext {
+      padding: 10px 15px;
+      display: flex;
+      flex-direction: column;
+      background-color: rgb(32, 30, 30);
+      flex-grow: 1;
+    }
 
-        display: flex;
-        flex-direction: column;
-      }
+    .fronttext .name h2 {
+      color: white;
+      font-size: 18px;
+      font-weight: 500;
+      margin-bottom: 25px;
+    }
 
-      .time {
-        font-size: small;
-      }
+    .fronttext .time {
+      color: #B0B0B0;
+      font-size: 14px;
+      margin-bottom: 5px;
+    }
 
-      .name {
-        color: white;
-      }
-      .time {
-        color: white;
-      }
-      .venue {
-        color: white;
-      }
+    .fronttext .venue {
+      color: #B0B0B0;
+      font-size: 14px;
+    }
 
-      .back {
-        background-color: linear-gradient(70deg, blue, pink);
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-      }
+    .descript {
+      color: #fff;
+      text-align: center;
+      width: 90%;
+      line-height: 23px;
+      font-size: 15px;
+      margin-bottom: 30px;
+    }
 
-      .descript{
-        color: #fff;
-        text-align: center;
+    .closebtn {
+      height: 40px;
+      width: 80px;
+      border-radius: 10px;
+      background-color: #007faa;
+      color: white;
+      border: none;
+      font-size: medium;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    .closebtn:hover {
+      background-color: #007196;
+    }
+
+    @media only screen and (max-width: 1148px) {
+      .card-container {
         width: 300px;
-        line-height: 23px;
-        font-size: 15px;
-        padding: 10px;
-        margin-bottom: 30px;
-
+        height: 480px;
       }
-
-      .closebtn{
-        height: 40px;
-        width: 80px;
-        border-radius: 10px;
-        background-color: #007FAA;
-        color: white;
-        border: none;
-        font-size: medium;
-        font-weight: bold;
-        
+      .fronttext .name h2 {
+        font-size: 16px;
+        margin-bottom: 15px;
       }
-      .closebtn:hover{
-        background-color: #007196;
-      
+      .fronttext .time,
+      .fronttext .venue {
+        font-size: 12px;
       }
-
-
-      @media only screen and (max-width: 1353px) {
-        .container {
-          /* column-gap: -20px; */
-          justify-content: space-between;
-          width: 70vw;
-          gap: 30px;
-        }
-        .mainheading{
-          display: flex;
-          justify-content: center;
-        }
+      .descript {
+        font-size: 14px;
+        line-height: 20px;
       }
+    }
 
-      @media only screen and (max-width: 1148px) {
-
-        .card {
-          width: 300px;
-          height: 500px;
-          
-        }
-        .fronttext{
-          font-size: small;
-          /* margin-bottom: 20px; */
-          
-        }
-        
+    @media only screen and (max-width: 768px) {
+      h1 {
+        font-size: 40px;
+        margin-left: 0;
       }
-
-      @media only  screen and (max-width:1019px) {
-
-        .container{
-          width: 40vw;
-          justify-content: center;
-        }
-        h1{
-          font-size: 40px;
-        }
-        
+      .main {
+        margin-left: 0;
+        padding: 20px;
       }
-
+      .container {
+        margin-left: 0;
+        justify-content: center;
+        width: 100%;
+      }
+      .card-container {
+        width: 280px;
+        height: 460px;
+      }
+      .footer {
+        margin-top: 0;
+      }
+    }
     
+    @media only screen and (max-width: 480px) {
+      h1 {
+        font-size: 32px;
+        margin-bottom: 20px;
+      }
+      .main {
+        padding: 15px;
+        min-width: unset;
+      }
+      body {
+        min-width: 320px;
+      }
+      .card-container {
+        width: 260px;
+        height: 420px;
+      }
+      .frontimage {
+        height: 70%;
+      }
+      .fronttext .name h2 {
+        font-size: 14px;
+        margin-bottom: 10px;
+      }
+      .fronttext .time,
+      .fronttext .venue {
+        font-size: 11px;
+      }
+      .descript {
+        font-size: 13px;
+        line-height: 19px;
+      }
+      .container {
+        gap: 30px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="main">
+    <h1>Tech Events</h1>
+    <div class="container">
 
-
-    </style>
-  </head>
-  <body>
-    <!-- DESIGNING CARDS FOR WEBSITES -->
-
-    <div class="main">
-      <div class="mainheading">
-        <h1>Tech Events</h1>
-
-      </div> 
-      <br>
-      
-      <div class="container">
-        <div class="card front">
-          <div class="frontimage">
-            <img src="/treasue.jpg" alt="" height="386px" width="344px"/>
-            
+      <!-- Card 1 -->
+      <div class="card-container">
+        <div class="card">
+          <div class="card-face front-face">
+            <div class="frontimage">
+              <img src="./images/treasue.jpg" alt="Treasure Hunt"/>
+            </div>
+            <div class="front-text">
+              <div class="info-icon" onclick="flipCard(this)">i</div>
+              <div class="fronttext">
+                <div class="name"><h2>Treasure Hunt</h2></div>
+                <div class="time">11 Nov - 4:30 PM</div>
+                <div class="venue">SAC Area</div>
+              </div>
+            </div>
           </div>
-
-          <div class="fronttext">
-            <div class="name">
-              <h2>Treasure Hunt</h2>
-            </div>
-
-            <div class="cardbottom">
-              <div class="time">
-                <time datetime="11 Nov - 4:30 PM"
-                  >11 Nov - 4:30 PM</time
-                >
-              </div>
-              <div class="venue">
-                <p>SAC Area</p>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="card back">
-          <p class="descript">Treasure Hunt is a thrilling, tech-themed competition where teams of 8 solve riddles and tech-related puzzles to uncover clues leading to the next location. Racing against other teams, participants must think fast and work together to reach the final surprise destination. The team that arrives first wins the prize.</p>
-
-          <button class="closebtn">Close</button>
-
-        </div>
-
-        <div class="card front">
-          <div class="frontimage">
-            <img src="jamming.jpg" alt="" height="386px" width="344px" />
-          </div>
-
-          <div class="fronttext">
-            <div class="name">
-              <h2>Jamming Night</h2>
-            </div>
-
-            <div class="cardbottom">
-              <div class="time">
-                <time datetime="12 Nov - 4:30pm"
-                  >12 Nov - 4:30pm</time
-                >
-              </div>
-              <div class="venue">
-                <p>SAC Area</p>
-              </div>
-            </div>
+          <div class="card-face back-face">
+            <p class="descript">
+              Treasure Hunt is a thrilling, tech-themed competition where teams of 8 solve riddles and puzzles to uncover clues and reach a surprise destination.
+            </p>
+            <button class="closebtn" onclick="closeCard(this)">Close</button>
           </div>
         </div>
+      </div>
 
-        <div class="card back">
-          <p class="descript">Groove to the Beat at Dance Night! Join us for an electrifying evening of live music and dance, where enthusiasts of all styles can showcase their moves and connect with fellow dancers. Bring your friends and dance the night away!</p>
-
-          <button class="closebtn">Close</button>
-
-        </div>
-
-        <div class="card front">
-          <div class="frontimage">
-            <img src="/paper.jpg" alt="" height="386px" width="344px" />
-          </div>
-
-          <div class="fronttext">
-            <div class="name">
-              <h2>Paper Dance</h2>
+      <!-- Card 2 -->
+      <div class="card-container">
+        <div class="card">
+          <div class="card-face front-face">
+            <div class="frontimage">
+              <img src="./images/jamming.jpg" alt="Jamming Night"/>
             </div>
-
-            <div class="cardbottom">
-              <div class="time">
-                <time datetime="12 Nov - 12:00-5:00pm"
-                  >12 Nov - 12:00-5:00pm</time
-                >
-              </div>
-              <div class="venue">
-                <p>SAC Area</p>
+            <div class="front-text">
+              <div class="info-icon" onclick="flipCard(this)">i</div>
+              <div class="fronttext">
+                <div class="name"><h2>Jamming Night</h2></div>
+                <div class="time">12 Nov - 4:30 PM</div>
+                <div class="venue">SAC Area</div>
               </div>
             </div>
           </div>
-        </div>
-
-        <div class="card back">
-          <p class="descript">Paper Dance is an engaging event where participants pair up to test their balance and teamwork. The challenge involves dancing on a piece of paper that folds with each step. The winning pairs are those who can stay on the paper until the final fold. This thrilling competition combines grace, balance, and collaboration, making it a fun and interactive experience for everyone involved.</p>
-
-          <button class="closebtn">Close</button>
-
-        </div>
-
-        <div class="card front">
-          <div class="frontimage">
-            <img src="/twister.jpg" alt="" height="386px" width="344px" />
+          <div class="card-face back-face">
+            <p class="descript">
+              Groove to the Beat at Dance Night! Enjoy an electrifying evening of live music and dance. Showcase your moves and vibe with fellow dancers!
+            </p>
+            <button class="closebtn" onclick="closeCard(this)">Close</button>
           </div>
+        </div>
+      </div>
 
-          <div class="fronttext">
-            <div class="name">
-              <h2>Twister</h2>
+      <!-- Card 3 -->
+      <div class="card-container">
+        <div class="card">
+          <div class="card-face front-face">
+            <div class="frontimage">
+              <img src="./images/paper.jpg" alt="Paper Dance"/>
             </div>
-
-            <div class="cardbottom">
-              <div class="time">
-                <time datetime="12 nov - 12:00-5:00pm"
-                  >12 nov - 12:00-5:00pm</time
-                >
-              </div>
-              <div class="venue">
-                <p>B Block,4th floor</p>
+            <div class="front-text">
+              <div class="info-icon" onclick="flipCard(this)">i</div>
+              <div class="fronttext">
+                <div class="name"><h2>Paper Dance</h2></div>
+                <div class="time">12 Nov - 12:00-5:0 PM</div>
+                <div class="venue">SAC area</div>
               </div>
             </div>
           </div>
-        </div>
-
-        <div class="card back">
-          <p class="descript">Twister is a fun game where players place hands and feet on colors chosen by a spinner. As they twist into awkward positions to avoid overlapping, anyone who falls or touches the mat with an elbow or knee is out. Get ready for unpredictable fun!</p>
-
-          <button class="closebtn">Close</button>
-
-        </div>
-
-        <div class="card front">
-          <div class="frontimage">
-            <img src="/pvp.jpg" alt="" height="386px" width="344px" />
+          <div class="card-face back-face">
+            <p class="descript">
+              Paper Dance is an engaging event where participants pair up to test their balance and teamwork. The challenge involves dancing on a piece of paper that folds with each step. The winning pairs are those who can stay on the paper until the final fold. This thrilling competition combines grace, balance, and collaboration, making it a fun and interactive experience for everyone involved.
+            </p>
+            <button class="closebtn" onclick="closeCard(this)">Close</button>
           </div>
+        </div>
+      </div>
 
-          <div class="fronttext">
-            <div class="name">
-              <h2>PVP Gaming</h2>
+      <!-- Card 4 -->
+      <div class="card-container">
+        <div class="card">
+          <div class="card-face front-face">
+            <div class="frontimage">
+              <img src="./images/twister.jpg" alt="Twister"/>
             </div>
-
-            <div class="cardbottom">
-              <div class="time">
-                <time datetime="12 Nov - 12:00-5:00pm"
-                  >12 Nov - 12:00-5:00pm</time
-                >
-              </div>
-              <div class="venue">
-                <p>Zairza</p>
+            <div class="front-text">
+              <div class="info-icon" onclick="flipCard(this)">i</div>
+              <div class="fronttext">
+                <div class="name"><h2>Twister</h2></div>
+                <div class="time">12 Nov - 12:00-5:00 PM</div>
+                <div class="venue">B Block, 4th floor</div>
               </div>
             </div>
           </div>
-        </div>
-
-        <div class="card back">
-          <p class="descript">PVP Gaming is an exciting one-on-one competition where players choose from a diverse roster of iconic characters with unique abilities. Matches will test skills and reflexes, with winners determined in a knockout format based on the best of three matches. Showcase your talents and aim to be crowned the ultimate champion!</p>
-
-          <button class="closebtn">Close</button>
-        </div>
-        <div class="card front">
-          <div class="frontimage">
-            <img src="/proggramme.jpg" alt="" height="386px" width="344px" />
+          <div class="card-face back-face">
+            <p class="descript">
+Twister is a fun game where players place hands and feet on colors chosen by a spinner. As they twist into awkward positions to avoid overlapping, anyone who falls or touches the mat with an elbow or knee is out. Get ready for unpredictable fun!
+            </p>
+            <button class="closebtn" onclick="closeCard(this)">Close</button>
           </div>
+        </div>
+      </div>
 
-          <div class="fronttext">
-            <div class="name">
-              <h2>Programemer</h2>
+      <!-- Card 5 -->
+      <div class="card-container">
+        <div class="card">
+          <div class="card-face front-face">
+            <div class="frontimage">
+              <img src="./images/pvp.jpg" alt="PVP Gaming"/>
             </div>
-
-            <div class="cardbottom">
-              <div class="time">
-                <time datetime="11 Nov & 12 Nov"
-                  >11 Nov & 12 Nov</time
-                >
-              </div>
-              <div class="venue">
-                <p>Online</p>
+            <div class="front-text">
+              <div class="info-icon" onclick="flipCard(this)">i</div>
+              <div class="fronttext">
+                <div class="name"><h2>PVP Gaming</h2></div>
+                <div class="time">12 Nov - 12:00-5:00 PM</div>
+                <div class="venue">Zairza</div>
               </div>
             </div>
           </div>
+          <div class="card-face back-face">
+            <p class="descript">
+              PVP Gaming is an exciting one-on-one competition where players choose from a diverse roster of iconic characters with unique abilities. Matches will test skills and reflexes, with winners determined in a knockout format based on the best of three matches. Showcase your talents and aim to be crowned the ultimate champion!
+            </p>
+            <button class="closebtn" onclick="closeCard(this)">Close</button>
+          </div>
         </div>
+      </div>
 
-        <div class="card back">
-          <p class="descript">Programemer invites participants to unleash their inner meme artist! To enter, submit your original memes via the provided Google Form. Submitted memes will be posted on social media, where you can promote your entries for more likes and views. The participant with the most likes will be crowned the winner. Get creative and join the fun!</p>
-
-          <button class="closebtn">Close</button>
+      <!-- Card 6 -->
+      <div class="card-container">
+        <div class="card">
+          <div class="card-face front-face">
+            <div class="frontimage">
+              <img src="./images/proggramme.jpg" alt="Programemer"/>
+            </div>
+            <div class="front-text">
+              <div class="info-icon" onclick="flipCard(this)">i</div>
+              <div class="fronttext">
+                <div class="name"><h2>Programemer</h2></div>
+                <div class="time">11 Nov & 12 Nov</div>
+                <div class="venue">Online</div>
+              </div>
+            </div>
+          </div>
+          <div class="card-face back-face">
+            <p class="descript">
+              Programemer invites participants to unleash their inner meme artist! To enter, submit your original memes via the provided Google Form. Submitted memes will be posted on social media, where you can promote your entries for more likes and views. The participant with the most likes will be crowned the winner. Get creative and join the fun!
+            </p>
+            <button class="closebtn" onclick="closeCard(this)">Close</button>
+          </div>
         </div>
       </div>
     </div>
-  </body>
+  </div>
+  
+  <footer>
+    <div class="footer">
+        <div class="top-foot">
+            <h1 class="toptext">Want to know about us ?</h1>
+        </div>
+        
+        <div class="mid">
+            <div class="midtext">
+            <p>Come and know more about Zairza and join our community to experience such more amazing stuffs.</p>
+            </div>
+            <div class="midicons">
+                <div class="icons"><a href=""><i class="fa-brands fa-facebook"></i></a></div>
+                <div class="icons"><a href=""><i class="fa-brands fa-threads"></i></a></div>
+                <div class="icons"><a href=""><i class="fa-brands fa-youtube"></i></a></div>
+                <div class="icons"><a href=""><i class="fa-solid fa-envelope"></i></i></a></div>
+                <div class="icons"><a href=""><i class="fa-brands fa-instagram"></i></a></div>
+                <div class="icons"><a href=""><i class="fa-brands fa-linkedin"></i></a></div>
+            </div>
+        </div>
+        <div class="end">
+            <div class="bottext">
+              <p>OUTR (CET Campus), Kalinga Nagar, Ghatikia, Bhubaneswar, Odisha. 
+                +918984344805</p>
+            </div>
+            <div class="logo">
+                <i class="logos">Presented by</i>
+            </div>
+            <div class="logos">
+                <img src="./images/logo.jpg"  style="background: transparent; height: 50px;">
+            </div>
+        </div>
+    </div>
+</footer>
+
+  <script>
+    function flipCard(element) {
+      // Find the parent card container and toggle the flipped class
+      const cardContainer = element.closest(".card-container");
+      cardContainer.classList.add("flipped");
+    }
+    
+    function closeCard(element) {
+      // Find the parent card container and remove the flipped class
+      const cardContainer = element.closest(".card-container");
+      cardContainer.classList.remove("flipped");
+    }
+  </script>
+</body>
 </html>

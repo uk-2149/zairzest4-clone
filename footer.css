@@ -11,7 +11,7 @@ footer {
 }
 
 .footer {
-    text-align: center;
+    /* text-align: center; */
 }
 
 .top-foot {
@@ -19,6 +19,7 @@ footer {
     margin-bottom: 30px;
     width: 350px;
     margin: 0 auto 30px;
+    margin-left: 0;
 }
 
 .mid {
