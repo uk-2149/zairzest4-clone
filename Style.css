@@ -366,6 +366,10 @@ main {
   .Description {
     text-align: center !important;
   }
+  .two img{
+    max-height: 50vh;
+    max-width: 70vw;
+  }
 }
 
 @media (max-width: 500px) {
@@ -374,17 +378,22 @@ main {
     margin-bottom: 300px;
   }
   .two img {
-    width: 370px;
+    max-height: 40vh;
+    max-width: 80vw;
   }
 }
 @media (max-width: 350px) {
   .two img {
-    width: 320px;
+    max-height: 30vh;
+    max-width: 70vw;
   }
 }
 .two img {
-  height: 300px;
+  height: auto;
+  max-height: 80vh;
   width: auto;
+  max-width: 90vw;
+  object-fit: contain;
 }
 
 .Description {
