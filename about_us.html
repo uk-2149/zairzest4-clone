@@ -87,13 +87,19 @@
 
       @media (max-width: 760px) {
         footer {
-          margin-top: 0;
+          margin-top: 150vh;
         }
         .footer {
           margin-top: 0;
         }
         .midtext > p {
           text-align: center;
+        }
+      }
+
+      @media (max-width: 520px) {
+        footer {
+          margin-top: 260vh;
         }
       }
     </style>
@@ -291,6 +297,7 @@
         isPlaying = !isPlaying;
 
         if (isPlaying) {
+          audio.play();
           playPauseIcon.classList.remove("fa-play");
           playPauseIcon.classList.add("fa-pause");
         } else {

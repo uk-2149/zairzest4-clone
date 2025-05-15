@@ -1,7 +1,7 @@
 .pge {
     position: fixed;
     bottom: 20px;
-    right: 100px;
+    right: 5vw;
     background: transparent;
     z-index: 1001;
 }

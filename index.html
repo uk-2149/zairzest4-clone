@@ -248,6 +248,7 @@
             isPlaying = !isPlaying;
 
             if (isPlaying) {
+                audio.play();
                 playPauseIcon.classList.remove("fa-play");
                 playPauseIcon.classList.add("fa-pause");
             } else {
