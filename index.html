@@ -3,65 +3,57 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Style.css">
+    <link rel="stylesheet" href="footer.css">
+    <link rel="stylesheet" href="music.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <title>event page</title>
 </head>
 <style>
-
-    body{
-        background-color: rgb(10, 9, 9);
+    body {
+        background-color: rgb(17, 17, 17);
         margin: 0;
         padding: 0;
         overflow-x: hidden;
     }
-    .bottom{
+    .bottom {
+        margin-top: 70px;
         margin-bottom: 40px;
         text-align: center;
         color: #38ccff;
     }
-    .para1 {
-      width: 33vw;
-      min-width: 300px;
-      font-style: italic;
-      font-size: 1.1rem;
+    .bottom > h1 {
+        font-size: 2.7rem;
     }
-    p{
+    .para1 {
+        width: 33vw;
+        min-width: 300px;
+        font-style: italic;
+        font-size: 1.1rem;
+        font-style: italic;
+    }
+    p {
         color: white;
         margin: auto;
     }
-    .bottom-img{
+    .bottom-img {
         align-items: center;
         display: flex;
         flex-wrap: wrap;
         justify-content: center;
         margin-bottom: 50px;
-        gap: 40px;
-        
+        gap: 60px;
     }
     @media (max-width: 780px) {
-      .bottom-img {
-        flex-direction: column;
-        gap: 30px;
-      }
+        .bottom-img {
+            flex-direction: column;
+            gap: 30px;
+        }
     }
-    *{
+    * {
         box-sizing: border-box;
     }
-    .eventimg-1{
-        border: 4px;
-        background-image: url(./images/event_1.jpg);
-        background-position: 50%;
-        background-size: cover;
-        height: 280px;
-        width: 25vw;
-        padding: 0px 35px;
-        min-width: 290px;
-    }
-    .eventimg-1:hover{
-        scale: 1.1;
-        transition: all .5s;
-    }
-    .eventimg-2{
+    .eventimg-1 {
         border: 4px;
         background-image: url(./images/event_2.jpg);
         background-position: 50%;
@@ -70,259 +62,200 @@
         width: 25vw;
         padding: 0px 35px;
         min-width: 290px;
+        filter: brightness(0.9);
+        cursor: pointer;
     }
-    .eventimg-2:hover{
+    .eventimg-1:hover {
         scale: 1.1;
         transition: all .5s;
     }
-    .img1, .img2{
+    .eventimg-2 {
+        border: 4px;
+        background-image: url(./images/event_1.jpg);
+        background-position: 50%;
+        background-size: cover;
+        height: 280px;
+        width: 25vw;
+        padding: 0px 35px;
+        min-width: 290px;
+        filter: brightness(0.9);
+        cursor: pointer;
+    }
+    .eventimg-2:hover {
+        scale: 1.1;
+        transition: all .5s;
+    }
+    .img1, .img2 {
         color: white;
         margin-bottom: 0;
         margin-top: 200px;
     }
-  
-    @media(max-width: 408px){
-        .footer{
-            text-align: center;
-        }
+    footer {
+        margin-top: 0px;
     }
-    @media(max-width: 500px){
-        .footer{
-            text-align: center;
-        }
-    }
-    @media(max-width: 780px){
-        .footer{
-            padding: 3.5rem;
-        }
-    }
-    .footer{
+    .footer {
+        margin-top: 0;
         width: 100%;
-        background-color: #1a1a1a;
-        color: azure;
-        padding: 5rem 3.5rem;
-    }
-    *{
-        box-sizing: border-box;
-    }
-    @media(max-width: 768px){
-        *{
-            scrollbar-width: none;
-        }
-    }
-    @media(max-width: 408px){
-        .top-foot{
-        font-size: 15px;
-        margin: auto auto 20px;
-        width: 300px;
-        }
-    }
-    @media(max-width: 780px){
-        .top-foot{
-        font-size: 18px;
-        margin: auto;
-         text-align: center;
-        }
-    }
-    .top-foot{
-        font-size: 1.35rem;
-        margin-bottom: 30px;
-        width: 350px;
-    }
-    @media(max-width: 328px){
-        h1{
-            font-size: 1.5rem;
-        }
-    }
-    @media(max-width: 780px){
-        .mid{
-            flex-direction: column;
-        }
-    }
-    .mid{
-    align-items: center;
-    background: #0000;
-    display: flex;
-    justify-content: space-between;
-    margin-bottom: 30px;
-    }
-
-    .midtext {
-      max-width: 500px;
-      line-height: 1.3rem;
-    }
-    @media(max-width: 408px){
-        .midtext{
-            margin: auto auto 20px;
-            width: 220px;
-        }
-    }
-     @media(max-width: 500px){
-        .midtext{
-            margin: 20px;
-            width: 320px;
-        }
-    }
-     @media(max-width: 780px){
-        .midtext{
-          text-align: center;
-            margin: 15px auto;
-            width: 400px;
-        }
-    }
-    @media(max-width: 408px){
-        .midicons{
-            flex-wrap: wrap;
-            justify-content: center;
-            margin: auto auto 20px;
-        }
-    }
-    @media(max-width: 500px){
-        .midicons{
-            margin: 20px;
-            
-        }
-    }
-    @media(max-width: 780px){
-        .midicons{
-            margin-top: 10px;
-        }
-    }
-    .end, .midicons{
-        align-items: center;
-        background: #0000;
-        display: flex;
-    }
-    .midicons{
-        gap: 1.5rem;
-    }
-    .icons{
-    align-items: center;
-    color: #1a1a1a;
-    background-color: #38ccff;
-    border-radius: 50%;
-    cursor: pointer;
-    display: flex;
-    height: 40px;
-    justify-content: center;
-    width: 40px;
-    }
-    @media(max-width: 780px){
-        .end{
-            flex-direction: column;
-        }
-    }
-    .end{
-        justify-content: space-between;
-    }
-    .end, .midicons{
-      margin-top: 15px;
-        align-items: center;
-        background: #0000;
-        display: flex;
-    }
-    @media(max-width: 408px){
-        .bottext{
-            margin: auto auto 20px;
-            width: 200px;
-        }
-    }
-     @media(max-width: 408px){
-        .bottext{
-            margin: 20px;
-            width: 300px;
-        }
-    }
-    .bottext{
-        display: flex;
-        text-align: left;
-        background: #0000;
-        font-size: small;
-        width: 80vw; 
-        /* /use viewport lengths/ */
-    }
-    .bottext > p {
-      margin-left: 0;
-      max-width: 450px;
-      font-size: 0.8rem;
-    }
-    @media(max-width: 780px){
-        .logo{
-            margin: auto;
-        }
-        .bottext > p {
-      margin: 15px auto;
-      width: 300px;
-      font-size: 1.01rem;
-      text-align: center;
-    }
-
-    }
-    .logo{
-        align-items: center;
-        background: #0000;
-        display: flex;
-        
-        gap: 1rem;
-    }
-    .icons i:hover{
-        color: rgb(106, 204, 140);
-
     }
 </style>
 <body>
-    <div class="bottom">
+    <nav class="navbar">
+        <div class="nav-logo" onclick="navigateTo('index.html')">
+            <span class="zairzest-beyno-text">ZAIRZEST </span>
+            <span class="fourO-text">4.0</span>
+        </div>
+        <ul class="nav-links">
+            <li><a href="#" onclick="navigateTo('about_us.html')">About Us</a></li>
+            <li><a href="#" onclick="navigateTo('register.html')">Register</a></li>
+            <li><a href="#" onclick="navigateTo('sign_in.html')">Sign In</a></li>
+        </ul>
+        <!-- Hamburger Icon -->
+        <div class="hamburger" id="hamburger">
+            ☰
+        </div>
+    </nav>
+
+    <!-- Sidebar Menu -->
+    <div class="side-menu" id="sideMenu">
+        <div class="close-btn" id="closeBtn">✕</div>
+        <a href="#" onclick="navigateTo('about_us.html')">About Us</a>
+        <a href="#" onclick="navigateTo('register.html')">Register</a>
+        <a href="#" onclick="navigateTo('sign_in.html')">Sign In</a>
+    </div>
+
+    <main class="section">
+        <section class="one">
+            <img src="./images/1.jpg" alt="Zairzest event banner" class="bg-img">
+            <div class="cendiv">
+                <h1>Hunt the Future in the</h1>
+                <h1>Cyber Forest</h1>
+            </div>
+            <div class="buttons">
+                <button class="Events"><a href="#events" style="text-decoration: none; color: #38ccff;">Explore Events</a></button>
+                <button class="Register" onclick="navigateTo('register.html')">Register Now</button>
+            </div>
+            <div class="blur"></div>
+        </section>
+        <section class="two">
+            <img src="./images/Hero.webp" alt="Hero">
+            <div class="Description"> 
+                <h1 class="Tag"><span class="Zen">Zen 4.0 : </span>Your Guide in The Cyber Wild!</h1>
+                <p>'To forge the future, we must first innovate it.' As we move beyond our journey through the tech wilderness, we welcome you to the dynamic metropolis of technology. Embark with us as we traverse the cutting-edge neighborhoods of Cybercity, exploring diverse tech ecosystems, development pathways, recursion, data structures, and languages such as Python and Firefox. The most exciting revelations are still to come. Stay tuned for groundbreaking experiences ahead!</p>
+            </div>
+        </section>
+    </main>
+
+    <div class="bottom" id="events">
         <h1 class="event-head">Events for you</h1>
         <p class="para1">Everything has been made simple for you to scroll around and get the most out of the options available</p>
-        
     </div>
     <div class="bottom-img">
-    <div class="eventimg-1">
-        
-        <h1 class="img1">Tech Events</h1>
-        <p>click to view</p>
-    </div>
-    <div class="eventimg-2">
-        <h1 class="img2">Fun Events</h1>
-        <p>click to view</p>
-    </div>
-    </div>
-<footer>
-    <div class="footer">
-        <div class="top-foot">
-            <h1 class="toptext">Want to know about us ?</h1>
+        <div class="eventimg-1" onclick="navigateTo('tech-events.html')">
+            <h1 class="img1">Tech Events</h1>
+            <p>click to view</p>
         </div>
-        
-        <div class="mid">
-            <div class="midtext">
-            <p>Come and know more about Zairza and join our community to experience such more amazing stuffs.</p>
-            </div>
-            <div class="midicons">
-                <div class="icons"><a href=""><i class="fa-brands fa-facebook"></i></a></div>
-                <div class="icons"><a href=""><i class="fa-brands fa-threads"></i></a></div>
-                <div class="icons"><a href=""><i class="fa-brands fa-youtube"></i></a></div>
-                <div class="icons"><a href=""><i class="fa-solid fa-envelope"></i></i></a></div>
-                <div class="icons"><a href=""><i class="fa-brands fa-instagram"></i></a></div>
-                <div class="icons"><a href=""><i class="fa-brands fa-linkedin"></i></a></div>
-            </div>
-        </div>
-        <div class="end">
-            <div class="bottext">
-              <p>OUTR (CET Campus), Kalinga Nagar, Ghatikia, Bhubaneswar, Odisha. 
-                +918984344805</p>
-            </div>
-            <div class="logo">
-                <i class="logos">Presented by</i>
-            </div>
-            <div class="logos">
-                <img src="./images/logo.jpg"  style="background: transparent; height: 50px;">
-            </div>
+        <div class="eventimg-2" onclick="navigateTo('fun-events.html')">
+            <h1 class="img2">Fun Events</h1>
+            <p>click to view</p>
         </div>
     </div>
-</footer>
 
-<!-- AOS -->
-<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
-<script src="script.js"></script>
+    <footer>
+        <div class="footer">
+            <div class="top-foot">
+                <h1 class="toptext">Want to know about us ?</h1>
+            </div>
+            <div class="mid">
+                <div class="midtext">
+                    <p>Come and know more about Zairza and join our community to experience such more amazing stuffs.</p>
+                </div>
+                <div class="midicons">
+                    <div class="icons"><a href=""><i class="fa-brands fa-facebook"></i></a></div>
+                    <div class="icons"><a href=""><i class="fa-brands fa-threads"></i></a></div>
+                    <div class="icons"><a href=""><i class="fa-brands fa-youtube"></i></a></div>
+                    <div class="icons"><a href=""><i class="fa-solid fa-envelope"></i></a></div>
+                    <div class="icons"><a href=""><i class="fa-brands fa-instagram"></i></a></div>
+                    <div class="icons"><a href=""><i class="fa-brands fa-linkedin"></i></a></div>
+                </div>
+            </div>
+            <div class="end">
+                <div class="bottext">
+                    <p>OUTR (CET Campus), Kalinga Nagar, Ghatikia, Bhubaneswar, Odisha. +918984344805</p>
+                </div>
+                <div class="logo">
+                    <i class="logos">Presented by</i>
+                </div>
+                <div class="logos">
+                    <img src="./images/logo.jpg" style="background: transparent; height: 50px;">
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Music Player -->
+    <div class="pge" id="playerContainer">
+        <button class="play" onclick="toggleMusic()">
+            <i class="fa-solid fa-play" id="playPauseIcon"></i>
+        </button>
+    </div>
+
+    <!-- Audio Element -->
+    <audio id="audioPlayer" loop>
+        <source src="./assets/music/darkside.mpeg" type="audio/mpeg">
+        Your browser does not support the audio element.
+    </audio>
+
+    <!-- Scripts -->
+    <script>
+        const hamburger = document.getElementById('hamburger');
+        const sideMenu = document.getElementById('sideMenu');
+        const closeBtn = document.getElementById('closeBtn');
+
+        hamburger.onclick = () => {
+            sideMenu.classList.add('show');
+        };
+
+        closeBtn.onclick = () => {
+            sideMenu.classList.remove('show');
+        };
+    </script>
+
+    <!-- AOS -->
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script src="script.js"></script>
+
+    <!-- Navigation -->
+    <script>
+        function navigateTo(loc) {
+            document.body.classList.add("page-transition");
+            setTimeout(() => {
+                window.location.href = loc;
+            }, 300);
+        }
+
+        window.addEventListener("pageshow", function (event) {
+            document.body.classList.remove("page-transition");
+        });
+    </script>
+
+    <!-- Music Player Script -->
+    <script>
+        const audio = document.getElementById("audioPlayer");
+        const playPauseIcon = document.getElementById("playPauseIcon");
+        let isPlaying = false;
+
+        function toggleMusic() {
+            isPlaying = !isPlaying;
+
+            if (isPlaying) {
+                playPauseIcon.classList.remove("fa-play");
+                playPauseIcon.classList.add("fa-pause");
+            } else {
+                audio.pause();
+                playPauseIcon.classList.remove("fa-pause");
+                playPauseIcon.classList.add("fa-play");
+            }
+        }
+    </script>
 </body>
 </html>

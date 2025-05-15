@@ -1,179 +1,184 @@
 * {
-    box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 footer {
-    margin-top: 40vh;
-    width: 100vw;
-    background-color: #1a1a1a;
-    color: azure;
-    padding: 5rem 3.5rem;
+  margin-top: 10vh;
+  width: 100vw;
+  background-color: #1a1a1a;
+  color: azure;
+  padding: 5rem 3.5rem;
 }
 
 .footer {
-    /* text-align: center; */
+  /* text-align: center; */
 }
 
 .top-foot {
-    font-size: 1.35rem;
-    margin-bottom: 30px;
-    width: 350px;
-    margin: 0 auto 30px;
-    margin-left: 0;
+  font-size: 1.35rem;
+  width: 350px;
+}
+
+.para1 {
+  margin-top: 20px;
 }
 
 .mid {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background: transparent;
-    margin-bottom: 30px;
-    flex-wrap: wrap;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: transparent;
+  margin-bottom: 30px;
+  flex-wrap: wrap;
 }
 
 .midtext {
-    max-width: 500px;
-    line-height: 1.3rem;
-    text-align: left;
-    margin-bottom: 20px;
+  max-width: 500px;
+  line-height: 1.3rem;
+  text-align: left;
 }
 
 .midicons {
-    display: flex;
-    align-items: center;
-    gap: 1.5rem;
-    margin-top: 15px;
-    flex-wrap: wrap;
-    justify-content: flex-start;
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  margin-top: 15px;
+  flex-wrap: wrap;
+  justify-content: flex-start;
 }
 
 .icons {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color: #38ccff;
-    color: #1a1a1a;
-    border-radius: 50%;
-    width: 40px;
-    height: 40px;
-    cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #38ccff;
+  color: #1a1a1a;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
 }
 
 .icons i:hover {
-    color: rgb(106, 204, 140);
+  color: rgb(106, 204, 140);
 }
 
 .end {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-wrap: wrap;
-    margin-top: 15px;
-    background: transparent;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-top: 15px;
+  background: transparent;
 }
 
 .bottext {
-    display: flex;
-    text-align: left;
-    font-size: small;
-    width: 80vw;
-    background: transparent;
-    margin-top: 15px;
+  display: flex;
+  text-align: left;
+  font-size: small;
+  width: 80vw;
+  background: transparent;
+  margin-top: 15px;
 }
 
 .bottext > p {
-    margin-left: 0;
-    max-width: 450px;
-    font-size: 0.8rem;
+  margin-left: 0;
+  max-width: 450px;
+  font-size: 0.8rem;
 }
 
 .logo {
-    display: flex;
-    align-items: center;
-    gap: 1rem;
-    background: transparent;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  background: transparent;
 }
 
 @media (max-width: 780px) {
-    .footer {
-        padding: 3.5rem 2rem;
-        margin-top: 100vh;
-    }
+  .footer {
+    padding: 0;
+    margin-top: 100vh;
+  }
 
-    .top-foot {
-        font-size: 18px;
-        text-align: center;
-        width: 100%;
-    }
+  .top-foot {
+    font-size: 18px;
+    text-align: center;
+    width: 100%;
+    margin: 0 auto 30px;
+  }
 
-    .mid {
-        flex-direction: column;
-        align-items: center;
-    }
+  .mid {
+    flex-direction: column;
+    align-items: center;
+  }
 
-    .midtext {
-        text-align: center;
-        width: 90%;
-    }
+  .midtext {
+    text-align: center;
+    width: 90%;
+    margin: 0 auto 20px;
+  }
 
-    .midicons {
-        justify-content: center;
-    }
+  .midicons {
+    justify-content: center;
+  }
 
-    .end {
-        flex-direction: column;
-    }
+  .end {
+    flex-direction: column;
+  }
 
-    .bottext {
-        justify-content: center;
-    }
+  .bottext {
+    justify-content: center;
+  }
 
-    .bottext > p {
-        text-align: center;
-        font-size: 1.01rem;
-        width: 90%;
-        margin: 15px auto;
-    }
+  .bottext > p {
+    text-align: center;
+    font-size: 1.01rem;
+    width: 100%;
+    margin: 15px auto;
+  }
 
-    .logo {
-        justify-content: center;
-        margin: 15px auto;
-    }
+  .logo {
+    justify-content: center;
+    margin: 15px auto;
+  }
 }
 
 @media (max-width: 500px) {
-    .midtext {
-        width: 90%;
-    }
+  .top-foot {
+    width: 90%;
+    margin: 0 auto 30px;
+  }
 
-    .bottext {
-        width: 90%;
-    }
-    .footer {
-        margin-top: 160vh;
-    }
+  .midtext {
+    width: 90%;
+    margin: 0 auto 20px;
+  }
+
+  .bottext {
+    width: 90%;
+  }
 }
 
 @media (max-width: 408px) {
-    .top-foot,
-    .midtext,
-    .bottext {
-        width: 90%;
-    }
+  .top-foot,
+  .midtext,
+  .bottext {
+    width: 100%;
+  }
 
-    h1 {
-        font-size: 1.5rem;
-    }
+  h1 {
+    font-size: 1.5rem;
+  }
 }
 
 @media (max-width: 328px) {
-    h1 {
-        font-size: 1.3rem;
-    }
+  h1 {
+    font-size: 1.3rem;
+  }
 }
 
 @media (max-width: 768px) {
-    * {
-        scrollbar-width: none;
-    }
+  * {
+    scrollbar-width: none;
+  }
 }

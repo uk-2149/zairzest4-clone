@@ -1,144 +1,304 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="navbar.css" />
+    <link rel="stylesheet" href="footer.css" />
+    <link rel="stylesheet" href="music.css" />
     <link href="https://unpkg.com/aos@next/dist/aos.css" rel="stylesheet" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" href="footer.css">
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
     <title>about us</title>
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap');
+      @import url("https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap");
 
-        body {
-    background-color: #000000;
-    padding: 0;
-    margin: 0;
-    display: block;
-    font-family: "Outfit", sans-serif;
-    font-optical-sizing: auto;
-    font-weight: 550;
-    font-style: normal;
-}
+      body {
+        background-color: #000000;
+        padding: 0;
+        margin: 0;
+        display: block;
+        font-family: "Outfit", sans-serif;
+        font-optical-sizing: auto;
+        font-weight: 550;
+        font-style: normal;
+      }
 
-.container {
-    padding: 0;
-    width: 70.56vw;  
-    height: 58.48vw; 
-    margin: auto;
-}
+      .container {
+        margin-top: 80px;
+        padding: 0;
+        width: 70.56vw;
+        height: 58.48vw;
+        margin: auto;
+      }
 
-h1 {
-    color: #E8E6E3;
-    font-weight: 550;
-    font-size: 50px; 
-    letter-spacing: 0;
-}
+      .container > h1 {
+        color: #e8e6e3;
+        font-weight: 550;
+        font-size: 50px;
+        letter-spacing: 0;
+        margin-top: 100px;
+      }
 
-p {
-    text-align: justify;
-    font-size: 18px; 
-    margin: 0 0 1.67vw;
-    color: #C2BDB5;
-}
+      p {
+        text-align: justify;
+        font-size: 18px;
+        margin: 0 0 1.67vw;
+        color: #c2bdb5;
+      }
 
-.images {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-}
+      .images {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+      }
 
-img {
-    width: 35.26vw; 
-    height: 25.18vw;
-}
+      img {
+        width: 35.26vw;
+        height: 25.18vw;
+      }
 
-        
-        @media (max-width:780px ){
-           
-            .images{
-                display: flex;
-                flex-direction: column;
-                justify-content: center;
-                width: 100%;
-            }
-            img {
-                width: 70.56vw;
-    height: 250px;
-            }
-            
+      @media (max-width: 780px) {
+        .images {
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          width: 100%;
         }
+        img {
+          width: 70.56vw;
+          height: 250px;
+        }
+      }
+
+      footer {
+        margin-top: 64vh;
+      }
+
+      @media (max-width: 840px) {
+        footer {
+          margin-top: 70vh;
+        }
+      }
+
+      @media (max-width: 760px) {
+        footer {
+          margin-top: 0;
+        }
+        .footer {
+          margin-top: 0;
+        }
+        .midtext > p {
+          text-align: center;
+        }
+      }
     </style>
-</head>
+  </head>
 
-<body>
+  <body>
+    <nav class="navbar">
+      <div class="nav-logo" onclick="navigateTo('index.html')">
+        <span class="zairzest-beyno-text">ZAIRZEST </span>
+        <span class="fourO-text">4.0</span>
+      </div>
+
+      <ul class="nav-links">
+        <li><a href="#" onclick="navigateTo('about_us.html')">About Us</a></li>
+        <li><a href="#" onclick="navigateTo('register.html')">Register</a></li>
+        <li><a href="#" onclick="navigateTo('sign_in.html')">Sign In</a></li>
+      </ul>
+
+      <!-- Hamburger Icon -->
+      <div class="hamburger" id="hamburger">☰</div>
+    </nav>
+
+    <!-- Sidebar Menu -->
+    <div class="side-menu" id="sideMenu">
+      <div class="close-btn" id="closeBtn">✕</div>
+      <a href="#" onclick="navigateTo('about_us.html')">About Us</a>
+      <a href="#" onclick="navigateTo('register.html')">Register</a>
+      <a href="#" onclick="navigateTo('sign_in.html')">Sign In</a>
+    </div>
+
     <div class="container">
-        <h1 data-aos="fade-right"
+      <h1
+        data-aos="fade-right"
         data-aos-offset="300"
-        data-aos-easing="ease-in-sine">Zairza: Igniting Innovation</h1>
-    
-        <div class="para" >
-    
-            <p data-aos="fade-up">Zairza, more than just a club, is a vibrant community of tech enthusiasts at Odisha University of Technology and Research. Rooted in our motto, "Wonder, Think, Create," we've been pushing the boundaries of innovation in Robotics, Software, and Design since 2005. Officially recognized as a central club in 2007, Zairza has consistently achieved excellence, earning numerous accolades.
-            </p>
-        
-            <p data-aos="fade-up">Our mission is to empower students with the skills and knowledge needed to excel in their careers. Regular workshops and sessions provide a strong foundation, while industry internships offer invaluable real-world experience. Strategically located in the SAC area, we're easily accessible to all students.</p>
-        
-            <p data-aos="fade-up">Beyond academic pursuits, Zairza organizes the annual Zairzest technical fest. This three-day extravaganza features exciting competitions, workshops, and hackathons. Zairzest 3.0 was a resounding success, attracting hundreds of participants and showcasing the incredible talent of our members.</p>
-        
-            <p data-aos="fade-up">Join Zairza and be part of a legacy of innovation. Together, we'll shape the future of technology.
-            </p>
+        data-aos-easing="ease-in-sine"
+      >
+        Zairza: Igniting Innovation
+      </h1>
 
-            <div class="images" data-aos="zoom-in-up">
-                <img src="./images/zairzestimage01.png" alt="">
-                <img src="./images/zairzestimage02.png" alt="">
-                <img src="./images/zairzestimage03.png" alt="">
-                <img src="./images/zairzestimage04.png" alt="">
-            </div>
+      <div class="para">
+        <p data-aos="fade-up">
+          Zairza, more than just a club, is a vibrant community of tech
+          enthusiasts at Odisha University of Technology and Research. Rooted in
+          our motto, "Wonder, Think, Create," we've been pushing the boundaries
+          of innovation in Robotics, Software, and Design since 2005. Officially
+          recognized as a central club in 2007, Zairza has consistently achieved
+          excellence, earning numerous accolades.
+        </p>
+
+        <p data-aos="fade-up">
+          Our mission is to empower students with the skills and knowledge
+          needed to excel in their careers. Regular workshops and sessions
+          provide a strong foundation, while industry internships offer
+          invaluable real-world experience. Strategically located in the SAC
+          area, we're easily accessible to all students.
+        </p>
+
+        <p data-aos="fade-up">
+          Beyond academic pursuits, Zairza organizes the annual Zairzest
+          technical fest. This three-day extravaganza features exciting
+          competitions, workshops, and hackathons. Zairzest 3.0 was a resounding
+          success, attracting hundreds of participants and showcasing the
+          incredible talent of our members.
+        </p>
+
+        <p data-aos="fade-up">
+          Join Zairza and be part of a legacy of innovation. Together, we'll
+          shape the future of technology.
+        </p>
+
+        <div class="images" data-aos="zoom-in-up">
+          <img src="./images/zairzestimage01.png" alt="" />
+          <img src="./images/zairzestimage02.png" alt="" />
+          <img src="./images/zairzestimage03.png" alt="" />
+          <img src="./images/zairzestimage04.png" alt="" />
         </div>
-
+      </div>
     </div>
     <footer>
-        <div class="footer">
-            <div class="top-foot">
-                <h1 class="toptext">Want to know about us ?</h1>
-            </div>
-            
-            <div class="mid">
-                <div class="midtext">
-                <p>Come and know more about Zairza and join our community to experience such more amazing stuffs.</p>
-                </div>
-                <div class="midicons">
-                    <div class="icons"><a href=""><i class="fa-brands fa-facebook"></i></a></div>
-                    <div class="icons"><a href=""><i class="fa-brands fa-threads"></i></a></div>
-                    <div class="icons"><a href=""><i class="fa-brands fa-youtube"></i></a></div>
-                    <div class="icons"><a href=""><i class="fa-solid fa-envelope"></i></i></a></div>
-                    <div class="icons"><a href=""><i class="fa-brands fa-instagram"></i></a></div>
-                    <div class="icons"><a href=""><i class="fa-brands fa-linkedin"></i></a></div>
-                </div>
-            </div>
-            <div class="end">
-                <div class="bottext">
-                  <p>OUTR (CET Campus), Kalinga Nagar, Ghatikia, Bhubaneswar, Odisha. 
-                    +918984344805</p>
-                </div>
-                <div class="logo">
-                    <i class="logos">Presented by</i>
-                </div>
-                <div class="logos">
-                    <img src="./images/logo.jpg"  style="background: transparent; height: 50px;">
-                </div>
-            </div>
+      <div class="footer">
+        <div class="top-foot">
+          <h1 class="toptext">Want to know about us ?</h1>
         </div>
+
+        <div class="mid">
+          <div class="midtext">
+            <p>
+              Come and know more about Zairza and join our community to
+              experience such more amazing stuffs.
+            </p>
+          </div>
+          <div class="midicons">
+            <div class="icons">
+              <a href=""><i class="fa-brands fa-facebook"></i></a>
+            </div>
+            <div class="icons">
+              <a href=""><i class="fa-brands fa-threads"></i></a>
+            </div>
+            <div class="icons">
+              <a href=""><i class="fa-brands fa-youtube"></i></a>
+            </div>
+            <div class="icons">
+              <a href=""><i class="fa-solid fa-envelope"></i></a>
+            </div>
+            <div class="icons">
+              <a href=""><i class="fa-brands fa-instagram"></i></a>
+            </div>
+            <div class="icons">
+              <a href=""><i class="fa-brands fa-linkedin"></i></a>
+            </div>
+          </div>
+        </div>
+        <div class="end">
+          <div class="bottext">
+            <p>
+              OUTR (CET Campus), Kalinga Nagar, Ghatikia, Bhubaneswar, Odisha.
+              +918984344805
+            </p>
+          </div>
+          <div class="logo">
+            <i class="logos">Presented by</i>
+          </div>
+          <div class="logos">
+            <img
+              src="./images/logo.jpg"
+              style="background: transparent; width: 50px; height: 50px"
+            />
+          </div>
+        </div>
+      </div>
     </footer>
 
-<!-- AOS -->
-<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
-<script>
-    AOS.init({
-    duration: 1000,
-    easing: "ease-in-out",
-    once: true
-  });
-</script>
-</body>
+    <!-- Music Player -->
+    <div class="pge" id="playerContainer">
+      <button class="play" onclick="toggleMusic()">
+        <i class="fa-solid fa-play" id="playPauseIcon"></i>
+      </button>
+    </div>
+
+    <audio id="audioPlayer" loop>
+      <source src="./assets/music/darkside.mpeg" type="audio/mpeg" />
+      Your browser does not support the audio element.
+    </audio>
+
+    <!-- AOS -->
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init({
+        duration: 1000,
+        easing: "ease-in-out",
+        once: true,
+      });
+    </script>
+
+    <!-- Side-menu -->
+    <script>
+      const hamburger = document.getElementById("hamburger");
+      const sideMenu = document.getElementById("sideMenu");
+      const closeBtn = document.getElementById("closeBtn");
+
+      hamburger.onclick = () => {
+        sideMenu.classList.add("show");
+      };
+
+      closeBtn.onclick = () => {
+        sideMenu.classList.remove("show");
+      };
+    </script>
+    <script
+      src="https://kit.fontawesome.com/f8e1a90484.js"
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- Navigation -->
+    <script>
+      function navigateTo(loc) {
+        document.body.classList.add("page-transition");
+        setTimeout(() => {
+          window.location.href = loc;
+        }, 300);
+      }
+
+      window.addEventListener("pageshow", function (event) {
+        document.body.classList.remove("page-transition");
+      });
+    </script>
+
+    <!-- Music Player Script -->
+    <script>
+      const audio = document.getElementById("audioPlayer");
+      const playPauseIcon = document.getElementById("playPauseIcon");
+      let isPlaying = false;
+
+      function toggleMusic() {
+        isPlaying = !isPlaying;
+
+        if (isPlaying) {
+          playPauseIcon.classList.remove("fa-play");
+          playPauseIcon.classList.add("fa-pause");
+        } else {
+          audio.pause();
+          playPauseIcon.classList.remove("fa-pause");
+          playPauseIcon.classList.add("fa-play");
+        }
+      }
+    </script>
+  </body>
 </html>

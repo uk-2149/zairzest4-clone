@@ -1,0 +1,138 @@
+@font-face {
+  font-family: BEYNO;
+  src: url(./assets/BEYNO.ttf);
+}
+
+@font-face {
+  font-family: Outfit-regular;
+  src: url(./assets/Outfit-Regular.ttf);
+}
+
+@font-face {
+  font-family: Outfit-Bold;
+  src: url(../../assets/font/Outfit-Bold.ttf);
+}
+
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: white;
+  z-index: 1000;
+  background: #111111;
+  padding: 1em 5%;
+  padding-top: 0;
+  padding-bottom: 0;
+  font-family: Outfit-regular;
+  height: 5rem;
+  width: 100vw;
+}
+
+.zairzest-beyno-text {
+  font-family: "BEYNO";
+  letter-spacing: 9px;
+  font-size: 35.2px;
+}
+
+.fourO-text {
+  font-family: "Mohave-Bold";
+  letter-spacing: 9px;
+  font-size: 35.2px;
+  color: #38ccff;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 5rem;
+  margin-right: 30px;
+}
+
+.nav-links a {
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 1.25rem;
+}
+
+.nav-links:hover {
+  cursor: pointer;
+}
+
+/* Hamburger */
+.hamburger {
+  display: none;
+  font-size: 2rem;
+  cursor: pointer;
+}
+
+/* Sidebar Menu */
+.side-menu {
+  position: fixed;
+  top: 0;
+  right: -100%;
+  width: 45vw;
+  height: 100vh;
+  background-color: #000;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  padding: 2rem 1rem;
+  transition: right 0.3s ease-in-out;
+  z-index: 1001;
+}
+
+.side-menu.show {
+  right: 0;
+}
+
+.side-menu a {
+  margin: 1rem 0;
+  color: white;
+  text-decoration: none;
+  font-size: 1.2rem;
+}
+
+.close-btn {
+  align-self: flex-end;
+  font-size: 2rem;
+  cursor: pointer;
+}
+
+.content {
+  padding: 7rem 2rem;
+  max-width: 800px;
+  margin: auto;
+}
+
+@media (max-width: 768px) {
+  .nav-links {
+    display: none;
+  }
+
+  .hamburger {
+    display: block;
+  }
+  .zairzest-beyno-text {
+    letter-spacing: 6px;
+    font-size: 25.2px;
+  }
+
+  .fourO-text {
+    font-family: "Mohave-Bold";
+    letter-spacing: 6px;
+    font-size: 25.2px;
+    color: #38ccff;
+  }
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+.logo {
+  color: white;
+}

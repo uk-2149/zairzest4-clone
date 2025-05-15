@@ -1,240 +1,227 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Register</title>
 
     <style>
+      @import url("https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap");
+      body {
+        padding: 0;
+        margin: 0;
+      }
+      .pagecontainer {
+        background-color: #181a1b;
+        display: flex;
+        padding: 0;
+        margin: 0;
+        height: 100vh;
+        font-family: "Outfit", sans-serif;
+        justify-content: flex-start;
+      }
+      .leftside {
+        background-image: linear-gradient(
+            rgba(41, 41, 41, 0.5),
+            rgba(41, 41, 41, 0.5)
+          ),
+          url(./images/zairzest_signin.jpg);
+        /* flex: 3/4; */
+        padding: 0px 80px;
+        background-size: cover;
+        width: 50vw;
+      }
 
-        @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap');
-        body{
-            padding: 0;
-            margin: 0;
-        }
-        .pagecontainer{
-            background-color: #181A1B;
-            display: flex;
-            padding: 0;
-            margin: 0;
-            height: 100vh;
-            font-family: 'Outfit', sans-serif;
-            justify-content: flex-start;
+      .lefttext {
+        /* padding: 0px 80px 0px; */
+        height: 496.45px;
+        /* width: 368px; */
+        margin-top: 220px;
+        width: 600px;
+        margin: 320px auto;
 
+        color: #e8e6e3;
+      }
 
-        }
-        .leftside {
-            
-            background-image: linear-gradient(rgba(41, 41, 41, 0.5), rgba(41, 41, 41, 0.5)), url(./iamges/zairzest_signin.jpg);
-            /* flex: 3/4; */
-            padding: 0px 80px;
-            background-size: cover;
-            width: 50vw;
+      .lefttext > h1 {
+        /* font-size: ; */
+        font-weight: 500;
+        font-size: 60px;
+        /* width: 496.45px; */
+        letter-spacing: -2px;
+        line-height: 35px;
+      }
 
-        }
-        
-
-        .lefttext{
-            /* padding: 0px 80px 0px; */
-            height: 496.45px;
-            /* width: 368px; */
-            margin-top: 220px;
-            width: 600px;
-            margin: 320px auto;
-            
-            color: #E8E6E3;
-            
-            
-        }
-        
-        .lefttext > h1{
-            /* font-size: ; */
-            font-weight: 500;
-            font-size: 60px;
-            /* width: 496.45px; */
-            letter-spacing: -2px;
-            line-height: 35px;
-            
-
-            
-        }
-
-        .rightcard {
-            height: 100vh;
-            /* flex: 1/4; */
-            display: flex;
-            flex-direction: column;
-            /* justify-content: center;
+      .rightcard {
+        height: 100vh;
+        /* flex: 1/4; */
+        display: flex;
+        flex-direction: column;
+        /* justify-content: center;
             align-items: center; */
-            /* padding: 0px 16px 0px; */
-            align-self: center;
-            justify-content: center;
-            /* /* padding-left: 50px;  */
-            width: 30vw;
-            min-width: 300px;
-            margin: auto;
+        /* padding: 0px 16px 0px; */
+        align-self: center;
+        justify-content: center;
+        /* /* padding-left: 50px;  */
+        width: 30vw;
+        min-width: 300px;
+        margin: auto;
+      }
+
+      @media (max-width: 1024px) {
+        .rightcard {
+          width: 60vw;
         }
+      }
 
-        @media (max-width: 1024px) {
-            .rightcard {
-                width: 60vw;
-            }
+      .cardheading {
+        color: #41ceff;
+        margin-top: 40px;
+        font-weight: 550;
+      }
+      .cardsubheading {
+        color: #808080;
+      }
+
+      form {
+        /* display:block; */
+        /* flex-direction: column; */
+
+        padding-right: 20px;
+        justify-content: center;
+        align-items: center;
+        /* display: flex; */
+        /* flex-direction: column; */
+        /* flex-wrap: wrap; */
+      }
+
+      input {
+        color: white;
+        display: block;
+        text-align: justify;
+        box-sizing: border-box;
+        width: 100%;
+        border: 1px solid rgb(95, 77, 77);
+        border-radius: 8px;
+
+        margin-top: 0;
+        margin-bottom: 0;
+        margin-left: 0;
+        margin-right: 0;
+
+        padding: 12px;
+        margin-bottom: 10px;
+        background: #333232;
+        font-size: medium;
+      }
+      input:hover {
+        background-color: #282121;
+        border: 1px solid white;
+      }
+
+      .QRCODE {
+        padding: 35px;
+        justify-self: center;
+      }
+
+      button {
+        display: block;
+        justify-self: center;
+        color: white;
+        font-weight: bold;
+        font-size: 90%;
+        padding: 12px;
+        height: 45px;
+        width: 100px;
+        border-radius: 8px;
+        background-color: #007faa;
+        border: none;
+      }
+      button:hover {
+        background-color: #0196c7;
+      }
+      .bottom_text {
+        color: #808080;
+      }
+      p > a {
+        color: rgba(19, 153, 255, 0.788);
+      }
+
+      @media only screen and (max-width: 1021px) {
+        .leftside {
+          display: none;
         }
-
-        
-        .cardheading {
-            color: #41CEFF;
-            margin-top: 40px;
-            font-weight: 550;
-            
-
-            
+        .pagecontainer {
+          justify-content: center;
         }
-        .cardsubheading {
-            color: #808080;
-            
-            
-        }
-
-        form {
-            /* display:block; */
-            /* flex-direction: column; */
-
-            padding-right: 20px;
-            justify-content: center;
-            align-items: center;
-            /* display: flex; */
-            /* flex-direction: column; */
-            /* flex-wrap: wrap; */
-            
-            
-            
-        }
-
-       
-        
-
-        input {
-            color: white;
-            display: block;
-            text-align: justify;
-            box-sizing: border-box;
-            width: 100%;
-            border: 1px solid rgb(95, 77, 77);
-            border-radius: 8px;
-            
-            margin-top: 0;
-            margin-bottom: 0;
-            margin-left: 0;
-            margin-right: 0;
-
-            padding: 12px;
-            margin-bottom: 10px;
-            background: #333232;
-            font-size: medium;
-            
-            
-        }
-        input:hover{
-            background-color: #282121;
-            border: 1px solid white;
-        }
-
-        .QRCODE {
-            padding: 35px;
-            justify-self: center;
-
-        }
-        
-        button {
-            display: block;
-            justify-self: center;
-            color: white;
-            font-weight: bold;
-            font-size: 90%;
-            padding: 12px;
-            height: 45px;
-            width: 100px;
-            border-radius: 8px;
-            background-color: #007FAA;
-            border: none;
-        }
-        button:hover{
-            background-color: #0196c7;        
-        }
-        .bottom_text {
-            color: #808080;
-
-        }
-        p > a{
-            color: rgba(19, 153, 255, 0.788);
-        }
-
-        @media only screen and (max-width:1021px) {
-            .leftside{
-                display: none;
-            }
-            .pagecontainer {
-                justify-content: center;
-            }
-            
-        }
-    
-
-
-
+      }
     </style>
-</head>
-<body>
+  </head>
+  <body>
     <div class="pagecontainer">
-        <div class="leftside">
-            <div class="lefttext">
-                <h1>Enter the untamed</h1>
-                <h1>wilderness with</h1>
-                <h1>ZAIRZA</h1>
+      <div class="leftside">
+        <div class="lefttext">
+          <h1>Enter the untamed</h1>
+          <h1>wilderness with</h1>
+          <h1>ZAIRZA</h1>
 
-                <div class="leftpara">
-                    <p>Release all your stress with the exciting Tech and Fun events in the most awaited fest . Zairzest 4.0 presented by Zairza.</p>
+          <div class="leftpara">
+            <p>
+              Release all your stress with the exciting Tech and Fun events in
+              the most awaited fest . Zairzest 4.0 presented by Zairza.
+            </p>
+          </div>
+        </div>
+      </div>
 
-                </div>
-            </div>
-
+      <div class="rightcard">
+        <div class="header">
+          <h1 class="cardheading">Become the Beast of the Cyber Forest</h1>
+          <p class="cardsubheading" style="font-size: large">
+            Sign up to get into Zairzest
+          </p>
         </div>
 
-        <div class="rightcard">
-            <div class="header">
-                <h1 class="cardheading">Become the Beast of the Cyber Forest</h1>
-                <p class="cardsubheading" style="font-size: large;">Sign up to get into Zairzest</p>
+        <form action="">
+          <div><input type="text" name="" id="" placeholder="Name" /></div>
 
-            </div>
+          <div>
+            <input
+              type="number"
+              name=""
+              placeholder="Registration Number"
+              id=""
+            />
+          </div>
+          <div>
+            <input type="email" name="" placeholder="Email here" id="" />
+          </div>
+          <div>
+            <input
+              type="password"
+              name=""
+              placeholder="Create Your Own Password"
+              id=""
+            />
+          </div>
+          <div class="QRCODE">
+            <img width="150px" src="./images/paymentregister.png" alt="" />
+          </div>
+          <div class="button">
+            <button type="submit">Sign Up</button>
+          </div>
 
-            <form action="" >
-                <div><input type="text" name="" id="" placeholder="Name"></div>
-
-                <div><input type="number" name="" placeholder="Registration Number" id=""></div>
-                <div><input type="email" name="" placeholder="Email here" id=""></div>
-                <div><input type="password" name="" placeholder="Create Your Own Password" id=""></div>
-                <div class="QRCODE">
-                    <img width="150px" src="./images/paymentregister.png" alt="">
-                </div>
-                <div class="button">
-                    <button type="submit">Sign Up</button>
-                </div>
-                
-                <div class="bottom_text">
-                    <p>Already registered ?
-                        <a href="">Login</a></p>
-                </div>
-            </form>
-
-        </div>
-
-
-        
+          <div class="bottom_text">
+            <p>Already registered ? <a href="">Login</a></p>
+          </div>
+        </form>
+      </div>
     </div>
 
-<!-- AOS -->
-<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
-<script src="script.js"></script>
-</body>
+    <!-- Scripts -->
+     
+    <!-- AOS -->
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script src="script.js"></script>
+  </body>
 </html>
