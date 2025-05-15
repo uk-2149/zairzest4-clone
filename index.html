@@ -7,7 +7,12 @@
     <link rel="stylesheet" href="footer.css">
     <link rel="stylesheet" href="music.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <title>event page</title>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="icon" href="./images/logo1.png" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Mohave:ital,wght@0,300..700;1,300..700&display=swap" rel="stylesheet">
+    <title>Zairzest 4.0</title>
 </head>
 <style>
     body {
@@ -44,6 +49,11 @@
         margin-bottom: 50px;
         gap: 60px;
     }
+
+    .fourO-text{
+        font-family: "Mohave", sans-serif;
+    }
+
     @media (max-width: 780px) {
         .bottom-img {
             flex-direction: column;
@@ -126,18 +136,21 @@
     <main class="section">
         <section class="one">
             <img src="./images/1.jpg" alt="Zairzest event banner" class="bg-img">
-            <div class="cendiv">
+            <div class="cendiv" data-aos="fade-right">
                 <h1>Hunt the Future in the</h1>
                 <h1>Cyber Forest</h1>
             </div>
-            <div class="buttons">
+            <div class="buttons" data-aos="fade-right">
                 <button class="Events"><a href="#events" style="text-decoration: none; color: #38ccff;">Explore Events</a></button>
                 <button class="Register" onclick="navigateTo('register.html')">Register Now</button>
             </div>
             <div class="blur"></div>
         </section>
         <section class="two">
-            <img src="./images/Hero.webp" alt="Hero">
+            <div data-aos="zoom-in-up">
+                <img src="./images/Hero.webp" alt="Hero">
+            </div>
+            
             <div class="Description"> 
                 <h1 class="Tag"><span class="Zen">Zen 4.0 : </span>Your Guide in The Cyber Wild!</h1>
                 <p>'To forge the future, we must first innovate it.' As we move beyond our journey through the tech wilderness, we welcome you to the dynamic metropolis of technology. Embark with us as we traverse the cutting-edge neighborhoods of Cybercity, exploring diverse tech ecosystems, development pathways, recursion, data structures, and languages such as Python and Firefox. The most exciting revelations are still to come. Stay tuned for groundbreaking experiences ahead!</p>
@@ -150,11 +163,15 @@
         <p class="para1">Everything has been made simple for you to scroll around and get the most out of the options available</p>
     </div>
     <div class="bottom-img">
-        <div class="eventimg-1" onclick="navigateTo('tech-events.html')">
+        <div class="eventimg-1" data-aos="flip-left"
+     data-aos-easing="ease-out-cubic"
+     data-aos-duration="1000" onclick="navigateTo('tech-events.html')">
             <h1 class="img1">Tech Events</h1>
             <p>click to view</p>
         </div>
-        <div class="eventimg-2" onclick="navigateTo('fun-events.html')">
+        <div class="eventimg-2" data-aos="flip-right"
+     data-aos-easing="ease-out-cubic"
+     data-aos-duration="1000" onclick="navigateTo('fun-events.html')">
             <h1 class="img2">Fun Events</h1>
             <p>click to view</p>
         </div>
