@@ -1,48 +1,37 @@
 @import url("https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap");
 
-
-body{
-    
-    
-    margin: 0;                      
+body {
+    margin: 0;
     padding: 0;
     font-family: "Outfit", sans-serif;
     min-width: 480px;
-    
+    background-color: #000; /* Added to match site theme */
 }
 
+/* Adjust root padding to account for fixed navbar */
 .root {
+    background-image: url(./images/bg_img_zen_id.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
     
-    background-image: url(./bg_img_zen_id.jpg); 
-    background-size: cover;         /* Scales image to cover the entire page */
-    background-repeat: no-repeat;   /* Prevents repeating */
-    background-position: center;    /* Centers the image */
-        /* background-attachment: fixed;   Optional: makes background stay on scroll */
-    height: 1380px; 
+    padding-top: 6rem; 
+    padding-bottom: 6rem; 
+    min-height: 100vh;
     display: flex;
-    
     justify-content: center;
-    /* align-items: center; */
-
-    
-
 }
 
-.container{
-    /* border: 2px solid red; */
-    /* width: 50vw; */
+.container {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    /* align-items: ; */
     justify-content: space-evenly;
-    height: 100vh;
     gap: 35px;
-    margin-top: 280px;
-
+    margin-top: 150px;
 }
 
-.card{
+.card {
     width: 300px;
     height: 365px;
     display: flex;
@@ -51,43 +40,45 @@ body{
     justify-content: center;
     box-shadow: 20px 20px 20px rgba(0, 0, 0, 0.4);
     border-radius: 15px;
-
-    background: linear-gradient(
-    180deg,
-    rgba(43, 128, 255, 1),
-    rgb(0, 0, 0)  );
+    background: linear-gradient(180deg, rgba(43, 128, 255, 1), rgb(0, 0, 0));
+    transition: transform 0.4s ease;
 }
 
-h4{
+.card:hover {
+    transform: translateY(-10px);
+}
+
+h4 {
     color: white;
     font-weight: 500;
+    margin-bottom: 8px;
 }
-
 
 img {
     border-radius: 8px;
 }
-.details > p{
+
+.details > p {
     color: rgb(0, 145, 255);
 }
-.card > p{
+
+.card > p {
     color: rgb(0, 145, 255);
     font-weight: bold;
     font-size: large;
-    
+    line-height: 1.4;
 }
-.card > h4,p {
+
+.card > h4, .card > p {
     line-height: 2px;
 }
 
-@media (max-width:480px ){
-
-    .container{
-        margin-top: 150px;
-        
-    }
-    .root{
-        /* align-items: flex-start; */
+@media (max-width: 480px) {
+    .container {
+        margin-top: 100px;
     }
 
+    .root {
+        padding-top: 5rem;
+    }
 }

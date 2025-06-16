@@ -1,59 +1,140 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>ZEN ID</title>
-    <link rel="stylesheet" href="zen_id_style.css">
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-</head>
-<body>
 
+    <!-- CSS Files -->
+    <link rel="stylesheet" href="zen_id_style.css" />
+    <link rel="stylesheet" href="navbar.css" />
+    <link rel="stylesheet" href="footer.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+  </head>
+
+  <style>
+    footer {
+      margin-top: 0;
+    }
+  </style>
+  <body>
+    <!-- Navbar -->
+    <nav class="navbar">
+      <div class="nav-logo" onclick="navigateTo('index.html')">
+        <span class="zairzest-beyno-text">ZAIRZEST </span>
+        <span class="fourO-text">4.0</span>
+      </div>
+
+      <ul class="nav-links">
+        <li><a href="about_us.html">About Us</a></li>
+        <li><a href="#">Hi, Harshit </a></li>
+        <li><a href="sign_in.html">Logout</a></li>
+      </ul>
+
+      <!-- Hamburger -->
+      <div class="hamburger" id="hamburger">☰</div>
+    </nav>
+
+    <!-- Sidebar Menu -->
+    <div class="side-menu" id="sideMenu">
+      <div class="close-btn" id="closeBtn">✕</div>
+      <a href="about_us.html">About Us</a>
+      <a href="#">Register</a>
+      <a href="#">Sign In</a>
+    </div>
+
+    <!-- Main Content -->
     <div class="root">
-
-        
-
-        <div class="container" >
-            <div  class="card 1" data-aos="zoom-in" data-aos-duration="800">
-                <div class="img">
-                    <img src="../zairzest images/paymentregister.png" height="240px" width="240px" alt="">
-                </div>
-
-                
-                <div class="details">
-                    <p>PAYMENT</p>
-                </div>
-                
-            </div>
-            <div class="card 2" data-aos="zoom-in" data-aos-duration="800">
-                <div class="img">
-                    <img src="../zairzest images/dark_knight_Zenid.jpg" height="240px" width="240px" alt="">
-                </div>
-                
-                
-                <h4>Harshit Agrawala</h4>
-                <p>ZEN-2111100567</p>
-                
-
-            </div>
-            <div class="card 3" data-aos="zoom-in" data-aos-duration="800">
-                <div class="img">
-                    <img src="../zairzest images/wp_link_zenid.png" height="240px" width="240px" alt="">
-                </div>
-
-                <div class="details">
-                    <p>ZAIRZEST 4.0 INFO</p>
-                </div>
-
-            </div>
-    
+      <div class="container">
+        <div class="card 1" data-aos="zoom-in" data-aos-duration="800">
+          <div class="img">
+            <img src="./images/paymentregister.png" height="240px" width="240px" alt="" />
+          </div>
+          <div class="details">
+            <p>PAYMENT</p>
+          </div>
         </div>
 
-        <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-        <script>
-            AOS.init();
+        <div class="card 2" data-aos="zoom-in" data-aos-duration="800">
+          <div class="img">
+            <img src="./images/dark_knight_Zenid.jpg" height="240px" width="240px" alt="" />
+          </div>
+          <h4>Harshit Agrawala</h4>
+          <p>ZEN-2111100567</p>
+        </div>
 
-        </script>
-    </body>
+        <div class="card 3" data-aos="zoom-in" data-aos-duration="800">
+          <div class="img">
+            <img src="./images/wp_link_zenid.png" height="240px" width="240px" alt="" />
+          </div>
+          <div class="details">
+            <p>ZAIRZEST 4.0 INFO</p>
+          </div>
+        </div>
+      </div>
     </div>
+
+    <!-- Footer -->
+    <footer>
+      <div class="footer">
+        <div class="top-foot">
+          <h1 class="toptext">Want to know about us ?</h1>
+        </div>
+
+        <div class="mid">
+          <div class="midtext">
+            <p>
+              Come and know more about Zairza and join our community to experience such more amazing stuffs.
+            </p>
+          </div>
+          <div class="midicons">
+            <div class="icons"><a href="#"><i class="fa-brands fa-facebook"></i></a></div>
+            <div class="icons"><a href="#"><i class="fa-brands fa-x-twitter"></i></a></div>
+            <div class="icons"><a href="#"><i class="fa-brands fa-youtube"></i></a></div>
+            <div class="icons"><a href="#"><i class="fa-solid fa-envelope"></i></a></div>
+            <div class="icons"><a href="#"><i class="fa-brands fa-instagram"></i></a></div>
+            <div class="icons"><a href="#"><i class="fa-brands fa-linkedin"></i></a></div>
+          </div>
+        </div>
+
+        <div class="end">
+          <div class="bottext">
+            <p>OUTR (CET Campus), Kalinga Nagar, Ghatikia, Bhubaneswar, Odisha. +91XXXXXXXXXX</p>
+          </div>
+          <div class="logo">
+            <i class="logos">Presented by</i>
+          </div>
+          <div class="logos">
+            <img src="./images/logo.png" style="background: transparent; width: 50px; height: 50px" />
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
+    <script>
+      const hamburger = document.getElementById("hamburger");
+      const sideMenu = document.getElementById("sideMenu");
+      const closeBtn = document.getElementById("closeBtn");
+
+      hamburger.onclick = () => sideMenu.classList.add("show");
+      closeBtn.onclick = () => sideMenu.classList.remove("show");
+
+      function navigateTo(loc) {
+        window.location.href = loc;
+      }
+    </script>
+  </body>
 </html>
